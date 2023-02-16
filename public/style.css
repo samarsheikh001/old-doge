@@ -1,0 +1,27 @@
+body {
+    height: 90vh;
+    background: #222831;
+    font-family: monospace;
+    margin: 0;
+}
+
+#streamVideo {
+    width: 100%;
+    background: rgb(255, 0, 200);
+    /* width: 80vw; */
+    /* display: inline; */
+}
+
+
+/* <!-- Room name -->
+        <div class="flex">
+            <input id="room-name" placeholder="Room" type="text" class="flex-1 ml-2 my-4 px-2" />
+            <button class="border my-4 mx-2 font-bold text-white rounded hover:bg-white hover:text-gray-900" id="set-roomname">
+          Set Room
+        </button>
+            <!-- Set USERNAME -->
+            <input id="user-name" placeholder="Name" type="text" class="flex-1 ml-2 my-4 px-2" />
+            <button class="border my-4 mx-2 font-bold text-white rounded hover:bg-white hover:text-gray-900" id="set-username">
+          Set Name
+        </button>
+        </div> */
