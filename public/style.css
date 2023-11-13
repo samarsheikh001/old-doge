@@ -1,17 +1,16 @@
 body {
-    height: 90vh;
-    background: #222831;
-    font-family: monospace;
-    margin: 0;
+  height: 90vh;
+  background: #222831;
+  font-family: monospace;
+  margin: 0;
 }
 
 #streamVideo {
-    width: 100%;
-    background: rgb(255, 0, 200);
-    /* width: 80vw; */
-    /* display: inline; */
+  width: 100%;
+  background: rgb(255, 0, 200);
+  /* width: 80vw; */
+  /* display: inline; */
 }
-
 
 /* <!-- Room name -->
         <div class="flex">

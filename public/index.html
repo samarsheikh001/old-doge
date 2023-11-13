@@ -1,64 +1,98 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="/socket.io/socket.io.js"></script>
-    <script type="module" src="test.js"></script>
-</head>
+    <script type="module" src="main.js"></script>
+  </head>
 
-<body>
-    <div class="flex flex-col h-full">
-        <div id="buttons-group" class="absolute m-8 z-10">
-            <button class="border px-4 py-2 font-bold text-white rounded hover:bg-white hover:text-gray-900" id="fullScreen">
+  <body class="bg-black">
+    <div class="flex flex-col h-full max-w-md mx-auto">
+      <div id="buttons-group" class="absolute m-8 z-10">
+        <button
+          class="border px-4 py-2 font-bold text-white rounded hover:bg-white hover:text-gray-900"
+          id="fullScreen"
+        >
           Full screen
         </button>
-            <button class="border border-green-600 font-bold px-4 py-2 text-green-500 rounded hover:bg-green-600 hover:text-white" id="play">
+        <button
+          class="border border-green-600 font-bold px-4 py-2 text-green-500 rounded hover:bg-green-600 hover:text-white"
+          id="play"
+        >
           Play
         </button>
-            <button class="border border-blue-600 font-bold px-4 py-2 text-blue-500 rounded hover:bg-blue-600 hover:text-white" id="pause">
+        <button
+          class="border border-blue-600 font-bold px-4 py-2 text-blue-500 rounded hover:bg-blue-600 hover:text-white"
+          id="pause"
+        >
           Pause
         </button>
-        </div>
+      </div>
 
-        <video controls src="" id="streamVideo" autoplay></video>
+      <video controls src="" id="streamVideo" autoplay></video>
 
-        <!-- Room name -->
-        <div class="flex my-2 justify-center">
-            <input id="room-name" placeholder="Room" type="text" class="w-1/5 mx-2" />
-            <button class="border font-bold text-white rounded hover:bg-white hover:text-gray-900" id="set-roomname">
+      <!-- Room name -->
+      <div class="flex my-2 justify-center">
+        <input
+          id="room-name"
+          placeholder="Room"
+          type="text"
+          class="w-1/5 mx-2"
+        />
+        <button
+          class="border font-bold text-white rounded hover:bg-white hover:text-gray-900"
+          id="set-roomname"
+        >
           Set Room
         </button>
-            <!-- Set USERNAME -->
-            <input id="user-name" placeholder="Name" type="text" class="w-1/5 mx-2" />
-            <button class="border font-bold text-white rounded hover:bg-white hover:text-gray-900" id="set-username">
+        <!-- Set USERNAME -->
+        <input
+          id="user-name"
+          placeholder="Name"
+          type="text"
+          class="w-1/5 mx-2"
+        />
+        <button
+          class="border font-bold text-white rounded hover:bg-white hover:text-gray-900"
+          id="set-username"
+        >
           Set Name
         </button>
-            <button class="border ml-2 font-bold text-white rounded hover:bg-white hover:text-gray-900" id="hide-toggle">
+        <button
+          class="border ml-2 font-bold text-white rounded hover:bg-white hover:text-gray-900"
+          id="hide-toggle"
+        >
           HC
         </button>
-        </div>
-        <!-- SET VIDEO URL -->
-        <div id="video-url-element" class="flex">
-            <input id="video-link" placeholder="video url" type="text" class="flex-1 ml-2 my-4 px-2" />
-            <button class="border px-4 py-2 my-4 m-2 font-bold text-white rounded hover:bg-white hover:text-gray-900" id="set-link">
+      </div>
+      <!-- SET VIDEO URL -->
+      <div id="video-url-element" class="flex">
+        <input
+          id="video-link"
+          placeholder="video url"
+          type="text"
+          class="flex-1 ml-2 my-4 px-2"
+        />
+        <button
+          class="border px-4 py-2 my-4 m-2 font-bold text-white rounded hover:bg-white hover:text-gray-900"
+          id="set-link"
+        >
           Set
         </button>
-        </div>
-        <div id="scroll" class="flex-1 overflow-scroll">
-            <ul id="messages" class="p-2 flex flex-col justify-end">
-            </ul>
-        </div>
-        <form id="form" class="flex px-2 my-2" action="">
-            <input class="flex-1 px-2 my-2" id="input" autocomplete="off" />
-            <button class="text-white m-2 border p-2">Send</button>
-        </form>
+      </div>
+      <div id="scroll" class="flex-1 overflow-scroll">
+        <ul id="messages" class="p-2 flex flex-col justify-end"></ul>
+      </div>
+      <span class="text-white" id="typing"></span>
+      <form id="form" class="flex px-2 my-2" action="">
+        <input class="flex-1 px-2 my-2" id="input" autocomplete="off" />
+        <button class="text-white m-2 border p-2">Send</button>
+      </form>
     </div>
-    <!-- <script>
-        const a = document.getElementById("scroll")
-        var rand = () => parseInt(Math.random() * 255)
-        a.style.background = `rgb(${rand()},${rand()},${rand()})`
-    </script> -->
-</body>
+  </body>
+</html>
